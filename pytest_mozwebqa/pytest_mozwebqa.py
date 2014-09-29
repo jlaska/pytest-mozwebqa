@@ -256,18 +256,18 @@ def pytest_addoption(parser):
     group._addoption('--browsername',
                      action='store',
                      dest='browser_name',
-                     default=os.environ.get('SELENIUM_BROWSER', None),
+                     default=os.environ.get('SELENIUM_BROWSER'),
                      metavar='str',
                      help='[webdriver] target browser name (default: %default).')
     group._addoption('--browserver',
                      action='store',
                      dest='browser_version',
-                     default=os.environ.get('SELENIUM_VERSION', None),
+                     default=os.environ.get('SELENIUM_VERSION'),
                      metavar='str',
                      help='[webdriver] target browser version (default: %default).')
     group._addoption('--platform',
                      action='store',
-                     default=os.environ.get('SELENIUM_PLATFORM', None),
+                     default=os.environ.get('SELENIUM_PLATFORM'),
                      metavar='str',
                      help='[webdriver] target platform (default: %default).')
     group._addoption('--webqatimeout',
